@@ -12,7 +12,8 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn package
-      - echo Build completed on `date`
+      - echo Build rep_uri $REPOSITORY_URI
+      - echo Build repo ${REPO}
       - docker build . -t $REPOSITORY_URI/${REPO}:latest
       - echo Build completed on `date`
   post_build:
